@@ -71,7 +71,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>Give Hope. Heal Lives. Help Ukraine.</h1>
     <p>Join us in providing urgent relief to those affected by the conflict in Ukraine.</p>
