@@ -72,26 +72,6 @@
 </head>
 <body>
 
-<h1 id="main-heading">Welcome</h1>
-<button id="lang-btn">Change Language</button>
-
-<script>
-  const btn = document.getElementById('lang-btn');
-  const heading = document.getElementById('main-heading');
-  let isEnglish = true;
-
-  btn.addEventListener('click', function() {
-    if (isEnglish) {
-      heading.textContent = 'Bienvenido'; // Spanish for Welcome
-      btn.textContent = 'Cambiar idioma';
-    } else {
-      heading.textContent = 'Welcome';
-      btn.textContent = 'Change Language';
-    }
-    isEnglish = !isEnglish;
-  });
-</script>
-
   <header>
     <h1>Give Hope. Heal Lives. Help Ukraine.</h1>
     <p>Join us in providing urgent relief to those affected by the conflict in Ukraine.</p>
