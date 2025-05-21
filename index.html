@@ -72,25 +72,38 @@
 </head>
 <body>
 
-<h1 id="main-heading">Welcome</h1>
-<button id="lang-btn">Change Language</button>
+  <h1 id="title">Translate</h1>
+  <p id="description">This is a multilingual website.</p>
 
-<script>
-  const btn = document.getElementById('lang-btn');
-  const heading = document.getElementById('main-heading');
-  let isEnglish = true;
+  <label for="language">Choose Language:</label>
+  <select id="language" onchange="translatePage()">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+  </select>
 
-  btn.addEventListener('click', function() {
-    if (isEnglish) {
-      heading.textContent = 'Bienvenido'; // Spanish for Welcome
-      btn.textContent = 'Cambiar idioma';
-    } else {
-      heading.textContent = 'Welcome';
-      btn.textContent = 'Change Language';
+  <script>
+    const translations = {
+      en: {
+        title: "Welcome",
+        description: "This is a multilingual website example."
+      },
+      es: {
+        title: "Bienvenido",
+        description: "Este es un ejemplo de sitio web multilingüe."
+      },
+      fr: {
+        title: "Bienvenue",
+        description: "Ceci est un exemple de site Web multilingue."
+      }
+    };
+
+    function translatePage() {
+      const lang = document.getElementById("language").value;
+      document.getElementById("title").innerText = translations[lang].title;
+      document.getElementById("description").innerText = translations[lang].description;
     }
-    isEnglish = !isEnglish;
-  });
-</script>
+  </script>
 
   <header>
     <h1>Give Hope. Heal Lives. Help Ukraine.</h1>
